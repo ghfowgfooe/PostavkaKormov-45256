@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поставка кормов для животных и птиц | Поставка жмыха и шрота подсолнечного и рапсового</title>
+    <meta name="description" content="Профессиональные поставки качественного подсолнечного и рапсового жмыха и шрота для животноводства и птицеводства. Собственное производство, контроль качества, доставка.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #2a6b2a;
+            --secondary-gold: #d4af37;
+            --light-beige: #f5f1e6;
+            --dark-gray: #333;
+            --light-gray: #f8f9fa;
+            --text-gray: #555;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-gray);
+            font-weight: 700;
+        }
+        /* Шапка */
+        header {
+            background: linear-gradient(rgba(42, 107, 42, 0.95), rgba(42, 107, 42, 0.9)), url('https://images.unsplash.com/photo-1591288484005-a2c4c5d5d5b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .logo span {
+            color: var(--secondary-gold);
+        }
+        .logo i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+        nav ul li a:hover {
+            color: var(--secondary-gold);
+        }
+        .contact-phone {
+            background-color: var(--secondary-gold);
+            color: var(--dark-gray);
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s;
+        }
+        .contact-phone:hover {
+            background-color: white;
+            color: var(--primary-green);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        /* Герой */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://img.freepik.com/premium-psd/idyllic-sunset-rural-landscape-with-factory-wind-turbine-cornfield_161754-69390.jpg?semt=ais_hybrid&w=740);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-gold);
+            color: var(--dark-gray);
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid var(--secondary-gold);
+        }
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--secondary-gold);
+        }
+        /* О компании */
+        .section {
+            padding: 5rem 1rem;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-size: 2.2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-gold);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Продукция */
+        .products-section {
+            background-color: var(--light-beige);
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .product-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin: 1.5rem 0;
+        }
+        .product-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+        .specs {
+            list-style: none;
+            padding: 0 1.5rem;
+            text-align: left;
+        }
+        .specs li {
+            margin-bottom: 0.7rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .specs li:before {
+            content: '✓';
+            color: var(--secondary-gold);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        /* Преимущества */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+        }
+        /* Контакты и форма */
+        .contact-section {
+            background-color: var(--light-gray);
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        .contact-info h3, .contact-form h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+        }
+        .contact-details {
+            margin-top: 2rem;
+        }
+        .contact-details p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--secondary-gold);
+            width: 20px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .submit-btn:hover {
+            background-color: #1e5a1e;
+        }
+        /* Сообщения формы */
+        .form-message {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .form-message.success {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+            border: 2px solid #155724;
+        }
+        .form-message.info {
+            background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+            color: #0c5460;
+            border: 2px solid #0c5460;
+        }
+        .form-message.error {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+            border: 2px solid #721c24;
+        }
+        .form-message a {
+            display: inline-block;
+            margin: 5px;
+            transition: transform 0.3s;
+        }
+        .form-message a:hover {
+            transform: scale(1.05);
+        }
+        .auto-send-notice {
+            background: #fff3cd;
+            color: #856404;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-left: 4px solid #ffc107;
+        }
+        /* Подвал */
+        footer {
+            background-color: var(--dark-gray);
+            color: #bbb;
+            padding: 3rem 1rem 1.5rem;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
+        }
+        .footer-column h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .footer-column a {
+            color: #bbb;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover {
+            color: var(--secondary-gold);
+        }
+        .copyright {
+            padding-top: 1.5rem;
+            border-top: 1px solid #555;
+            font-size: 0.9rem;
+        }
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                width: 100%;
+                display: none;
+                margin-top: 1rem;
+            }
+            nav.active {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+        /* Загрузка */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #2a6b2a;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-seedling"></i> Поставка кормов для животных и птиц 
+            </a>
+            <button class="mobile-menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#products">Продукция</a></li>
+                    <li><a href="#benefits">Преимущества</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+79136282831" class="contact-phone">
+                <i class="fas fa-phone-alt"></i> 8 (913) 628-28-31
+            </a>
+        </div>
+    </header>
+
+    <!-- Герой -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Качественные кормовые добавки для животноводства</h1>
+            <p>Ведущий поставщик подсолнечного и рапсового жмыха и шрота. Натуральный продукт, богатый протеином, для здоровья и продуктивности ваших животных.</p>
+            <a href="#contact" class="cta-button">Получить коммерческое предложение</a>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">О компании</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>ООО "Байк Ленд Омск"</strong> — надежный партнер для сельхозпредприятий и фермерских хозяйств, специализирующийся на поставках высококачественных белковых кормовых добавок.</p>
+                    <p>Мы работаем напрямую с крупнейшими маслоэкстракционными заводами, что гарантирует стабильность поставок, контроль качества на всех этапах и конкурентные цены.</p>
+                    <p>Наша миссия — способствовать развитию эффективного и рентабельного животноводства в России, обеспечивая его качественным и доступным сырьем.</p>
+                    <ul class="specs">
+                        <li>Собственная логистика и отлаженные цепочки поставок</li>
+                        <li>Строгий лабораторный контроль каждой партии</li>
+                        <li>Гибкие условия оплаты и работы с клиентами</li>
+                        <li>Техническая поддержка и консультации по применению</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Продукция -->
+    <section class="section products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Наша продукция</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Жмых подсолнечный</h3>
+                    <p>Высокобелковая кормовая добавка, получаемая после отжима масла из семян подсолнечника.</p>
+                    <ul class="specs">
+                        <li><strong>Сырой протеин:</strong> 27-30%</li>
+                        <li><strong>Сырой жир:</strong> 7-10%</li>
+                        <li><strong>Клетчатка:</strong> до 20%</li>
+                        <li><strong>Форма поставки:</strong> россыпь</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Шрот подсолнечный</h3>
+                    <p>Концентрированный источник протеина с минимальным содержанием жира, идеален для балансировки рационов.</p>
+                    <ul class="specs">
+                        <li><strong>Сырой протеин:</strong> 36-42%</li>
+                        <li><strong>Сырой жир:</strong> 1-3%</li>
+                        <li><strong>Клетчатка:</strong> до 23%</li>
+                        <li><strong>Форма поставки:</strong> россыпь, гранулированный</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Жмых рапсовый</h3>
+                    <p>Ценный источник протеина и энергии, с высоким содержанием незаменимых аминокислот.</p>
+                    <ul class="specs">
+                        <li><strong>Сырой протеин:</strong> 35-42%</li>
+                        <li><strong>Сырой жир:</strong> 8-12%</li>
+                        <li><strong>Клетчатка:</strong> до 14%</li>
+                        <li><strong>Особенность:</strong> низкое содержание глюкозинолатов</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>Шрот рапсовый</h3>
+                    <p>Обезжиренный высокопротеиновый корм. Современные технологии переработки обеспечивают безопасность продукта.</p>
+                    <ul class="specs">
+                        <li><strong>Сырой протеин:</strong> 37-42%</li>
+                        <li><strong>Сырой жир:</strong> 1-4%</li>
+                        <li><strong>Клетчатка:</strong> до 16%</li>
+                        <li><strong>Применение:</strong> КРС, свиньи, птица (ограничено)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="section" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>Гарантия качества</h4>
+                    <p>Вся продукция проходит лабораторный контроль и соответствует ГОСТ/ТУ. Сертификаты на каждую партию.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-ruble-sign"></i>
+                    </div>
+                    <h4>Конкурентная цена</h4>
+                    <p>Работаем без посредников, предлагая оптимальные цены за счет прямых договоров с заводами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и форма -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Оставьте заявку</h3>
+                    <p>Отправьте запрос на коммерческое предложение. Наши специалисты рассчитают стоимость с учетом объема, региона доставки и свяжутся с вами в течение рабочего дня.</p>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> г.Омск</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+79136282831">8 (913) 628-28-31</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:pomorov60@mail.ru">pomorov60@mail.ru</a></p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Форма заявки</h3>
+                    <div class="auto-send-notice">
+                        <i class="fas fa-info-circle"></i> Заявка автоматически отправится на почту pomorov60@mail.ru
+                    </div>
+                    <form id="requestForm">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product">Интересующая продукция</label>
+                            <select id="product" name="product">
+                                <option value="sunflower_meal">Жмых подсолнечный</option>
+                                <option value="sunflower_shrot">Шрот подсолнечный</option>
+                                <option value="rapeseed_meal">Жмых рапсовый</option>
+                                <option value="rapeseed_shrot">Шрот рапсовый</option>
+                                <option value="all">Вся продукция</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Дополнительная информация</label>
+                            <textarea id="message" name="message" placeholder="Укажите объем, регион доставки, сроки и другие детали"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Отправить заявку
+                        </button>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="#" class="footer-logo">Поставка кормов для <span style="color: #d4af37;">животных и птиц</span></a>
+                    <p>Надежный поставщик качественных кормовых добавок для сельского хозяйства России.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Продукция</h4>
+                    <a href="#products">Жмых подсолнечный</a>
+                    <a href="#products">Шрот подсолнечный</a>
+                    <a href="#products">Жмых рапсовый</a>
+                    <a href="#products">Шрот рапсовый</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Компания</h4>
+                    <a href="#about">О нас</a>
+                    <a href="#benefits">Преимущества</a>
+                    <a href="#contact">Контакты</a>
+                    <a href="#">Доставка и оплата</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone-alt"></i> 8 (913) 628-28-31</p>
+                    <p><i class="fas fa-envelope"></i> pomorov60@mail.ru</p>
+                    <div style="margin-top: 1rem;">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/79136282831" target="_blank" style="display: inline-block; margin-right: 10px; font-size: 1.2rem; color: #25D366;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <!-- Telegram -->
+                        <a href="https://t.me/+79136282831" target="_blank" style="display: inline-block; margin-right: 10px; font-size: 1.2rem; color: #0088cc;">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <!-- Viber -->
+                        <a href="viber://chat?number=+79136282831" style="display: inline-block; font-size: 1.2rem; color: #665CAC;">
+                            <i class="fab fa-viber"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript с АВТОМАТИЧЕСКОЙ ОТПРАВКОЙ -->
+    <script>
+        // Мобильное меню
+        const menuBtn = document.getElementById('menuBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        menuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuBtn.innerHTML = mainNav.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Плавная прокрутка
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    if(window.innerWidth <= 768) {
+                        mainNav.classList.remove('active');
+                        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // ============ АВТОМАТИЧЕСКАЯ ОТПРАВКА ============
+        const requestForm = document.getElementById('requestForm');
+        const formMessage = document.getElementById('formMessage');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        // Настройки
+        const TARGET_EMAIL = 'pomorov60@mail.ru';
+        const PHONE_NUMBER = '+79136282831';
+        
+        // URL для отправки (нужно будет заменить на ваш домен)
+        const SEND_EMAIL_URL = 'https://ваш-домен.ru/send-email.php';
+        
+        if(requestForm && submitBtn) {
+            requestForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Получаем данные формы
+                const formData = {
+                    name: document.getElementById('name').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    product: document.getElementById('product').value,
+                    message: document.getElementById('message').value.trim(),
+                    date: new Date().toLocaleString('ru-RU')
+                };
+                
+                // Валидация
+                if (!formData.name || !formData.phone) {
+                    showMessage('Пожалуйста, заполните имя и телефон', 'error');
+                    return;
+                }
+                
+                // Преобразуем название продукта
+                const productNames = {
+                    'sunflower_meal': 'Жмых подсолнечный',
+                    'sunflower_shrot': 'Шрот подсолнечный',
+                    'rapeseed_meal': 'Жмых рапсовый',
+                    'rapeseed_shrot': 'Шрот рапсовый',
+                    'all': 'Вся продукция'
+                };
+                formData.productText = productNames[formData.product] || formData.product;
+                
+                // Показываем загрузку
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<div class="loader"></div> Отправка...';
+                submitBtn.disabled = true;
+                
+                try {
+                    // ============ СПОСОБ 1: Отправка через Formspree (работает без сервера) ============
+                    const response = await fetch('https://formspree.io/f/mleqjjbj', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: formData.name,
+                            phone: formData.phone,
+                            email: formData.email || TARGET_EMAIL,
+                            product: formData.productText,
+                            message: formData.message || 'Нет сообщения',
+                            _subject: `Заявка с сайта: ${formData.name}`,
+                            _replyto: formData.email || TARGET_EMAIL
+                        })
+                    });
+                    
+                    if (response.ok) {
+                        // Успешная отправка
+                        showSuccessMessage(formData);
+                        saveToLocalStorage({ ...formData, sent: true });
+                        requestForm.reset();
+                    } else {
+                        // Если Formspree не сработал, пробуем второй способ
+                        throw new Error('Formspree не ответил');
+                    }
+                    
+                } catch (error) {
+                    console.error('Ошибка Formspree:', error);
+                    
+                    try {
+                        // ============ СПОСОБ 2: Отправка через Web3Forms (бесплатный аналог) ============
+                        const web3Response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                access_key: 'YOUR_WEB3FORMS_KEY', // Нужно получить на web3forms.com
+                                subject: `Заявка с сайта: ${formData.name}`,
+                                name: formData.name,
+                                phone: formData.phone,
+                                email: formData.email || 'не указан',
+                                product: formData.productText,
+                                message: formData.message || 'Нет сообщения',
+                                from_name: 'Сайт поставки кормов'
+                            })
+                        });
+                        
+                        if (web3Response.ok) {
+                            showSuccessMessage(formData);
+                            saveToLocalStorage({ ...formData, sent: true });
+                            requestForm.reset();
+                        } else {
+                            throw new Error('Web3Forms не сработал');
+                        }
+                        
+                    } catch (web3Error) {
+                        console.error('Ошибка Web3Forms:', web3Error);
+                        
+                        // ============ СПОСОБ 3: Mail.ru композер ============
+                        const subject = `Заявка с сайта: ${formData.name}`;
+                        const body = `
+НОВАЯ ЗАЯВКА С САЙТА
+
+👤 КЛИЕНТ:
+Имя: ${formData.name}
+Телефон: ${formData.phone}
+Email: ${formData.email || 'не указан'}
+
+🛒 ПРОДУКЦИЯ:
+${formData.productText}
+
+📝 СООБЩЕНИЕ:
+${formData.message || 'Нет дополнительной информации'}
+
+📅 ДАТА: ${formData.date}
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+📞 КОНТАКТЫ ДЛЯ СВЯЗИ:
+WhatsApp: https://wa.me/79136282831
+Telegram: https://t.me/+79136282831
+Позвонить: ${PHONE_NUMBER}
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Заявка отправлена автоматически с сайта
+                        `;
+                        
+                        // Кодируем для URL
+                        const encodedSubject = encodeURIComponent(subject);
+                        const encodedBody = encodeURIComponent(body);
+                        
+                        // Открываем Mail.ru композер
+                        const mailruUrl = `https://e.mail.ru/compose/?to=${TARGET_EMAIL}&subject=${encodedSubject}&body=${encodedBody}`;
+                        window.open(mailruUrl, '_blank');
+                        
+                        // Сохраняем заявку
+                        saveToLocalStorage({ ...formData, sent: false });
+                        
+                        // Показываем инструкцию
+                        showAlternativeMethods(formData);
+                    }
+                    
+                } finally {
+                    // Восстанавливаем кнопку
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }
+            });
+        }
+        
+        // Функция показа успешного сообщения
+        function showSuccessMessage(formData) {
+            const html = `
+                <div style="text-align: center; padding: 20px;">
+                    <div style="font-size: 3rem; color: #28a745; margin-bottom: 15px;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 style="color: #155724; margin-bottom: 15px;">✅ Заявка успешно отправлена!</h3>
+                    
+                    <div style="background: #d4edda; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: left;">
+                        <h4 style="color: #155724; margin-bottom: 10px;">
+                            <i class="fas fa-envelope"></i> Заявка отправлена на почту
+                        </h4>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                            <div>
+                                <strong>👤 Имя:</strong> ${formData.name}
+                            </div>
+                            <div>
+                                <strong>📱 Телефон:</strong> ${formData.phone}
+                            </div>
+                            ${formData.email ? `<div><strong>📧 Email:</strong> ${formData.email}</div>` : ''}
+                            <div>
+                                <strong>🛒 Продукция:</strong> ${formData.productText}
+                            </div>
+                            <div>
+                                <strong>📅 Дата:</strong> ${formData.date}
+                            </div>
+                        </div>
+                        
+                        <div style="background: #c3e6cb; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                            <p style="margin: 0; text-align: center;">
+                                <i class="fas fa-clock"></i> 
+                                <strong>Мы свяжемся с вами в течение 15 минут</strong>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                        <a href="tel:${PHONE_NUMBER}" 
+                           style="padding: 12px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                           <i class="fas fa-phone-alt"></i> Позвонить сейчас
+                        </a>
+                        <a href="https://wa.me/79136282831" target="_blank"
+                           style="padding: 12px 20px; background: #25D366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                           <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                        </a>
+                    </div>
+                </div>
+            `;
+            
+            showMessage(html, 'success');
+            
+            // Автоматическое скрытие через 10 секунд
+            setTimeout(() => {
+                const formMsg = document.getElementById('formMessage');
+                if (formMsg) {
+                    formMsg.style.display = 'none';
+                }
+            }, 10000);
+        }
+        
+        // Функция показа альтернативных методов
+        function showAlternativeMethods(formData) {
+            const subject = `Заявка от ${formData.name}`;
+            const body = `Имя: ${formData.name}%0D%0AТелефон: ${formData.phone}%0D%0AEmail: ${formData.email || 'не указан'}%0D%0AПродукция: ${formData.productText}%0D%0AСообщение: ${formData.message || 'нет'}%0D%0A%0D%0AДата: ${formData.date}`;
+            
+            const html = `
+                <div style="padding: 20px;">
+                    <div style="margin-bottom: 20px; text-align: center;">
+                        <i class="fas fa-external-link-alt" style="font-size: 2.5rem; color: #005ff9;"></i>
+                        <h3 style="color: #004085; margin-top: 10px;">Откройте Mail.ru для отправки</h3>
+                    </div>
+                    
+                    <div style="background: #e9f7fe; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <p><strong>Открылось новое окно с Mail.ru?</strong></p>
+                        <ol style="margin-left: 20px; margin-top: 10px;">
+                            <li>Авторизуйтесь в Mail.ru (если не авторизованы)</li>
+                            <li>Проверьте, что письмо заполнено</li>
+                            <li>Нажмите кнопку "Отправить"</li>
+                        </ol>
+                        
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="https://e.mail.ru/compose/?to=${TARGET_EMAIL}&subject=${encodeURIComponent(subject)}&body=${body}" 
+                               target="_blank"
+                               style="display: inline-block; padding: 15px 30px; background: #005ff9; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem;">
+                               <i class="fas fa-redo"></i> Открыть Mail.ru снова
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #d4f7e8; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #155724; margin-bottom: 15px;">
+                            <i class="fas fa-mobile-alt"></i> Альтернативные способы связи
+                        </h4>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <a href="tel:${PHONE_NUMBER}" 
+                               style="padding: 12px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; text-align: center;">
+                               <i class="fas fa-phone-alt"></i> Позвонить: ${PHONE_NUMBER}
+                            </a>
+                            <a href="https://wa.me/79136282831" target="_blank"
+                               style="padding: 12px; background: #25D366; color: white; text-decoration: none; border-radius: 5px; text-align: center;">
+                               <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                            </a>
+                            <a href="https://t.me/+79136282831" target="_blank"
+                               style="padding: 12px; background: #0088cc; color: white; text-decoration: none; border-radius: 5px; text-align: center;">
+                               <i class="fab fa-telegram"></i> Написать в Telegram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            showMessage(html, 'info');
+        }
+        
+        // Функция сохранения в localStorage
+        function saveToLocalStorage(data) {
+            try {
+                const requests = JSON.parse(localStorage.getItem('feed_requests') || '[]');
+                requests.push(data);
+                if (requests.length > 50) {
+                    requests.shift();
+                }
+                localStorage.setItem('feed_requests', JSON.stringify(requests));
+                console.log('📝 Заявка сохранена в localStorage');
+            } catch (e) {
+                console.error('Ошибка сохранения:', e);
+            }
+        }
+        
+        // Функция показа сообщений
+        function showMessage(html, type) {
+            if(formMessage) {
+                formMessage.innerHTML = html;
+                formMessage.className = `form-message ${type}`;
+                formMessage.style.display = 'block';
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        
+        // Валидация телефона
+        const phoneInput = document.getElementById('phone');
+        if(phoneInput) {
+            phoneInput.addEventListener('input', function(e) {
+                let value = this.value.replace(/\D/g, '');
+                if(value.startsWith('7') || value.startsWith('8')) {
+                    let formatted = '+7 ';
+                    value = value.substring(1);
+                    
+                    if(value.length > 0) formatted += '(' + value.substring(0, 3);
+                    if(value.length > 3) formatted += ') ' + value.substring(3, 6);
+                    if(value.length > 6) formatted += '-' + value.substring(6, 8);
+                    if(value.length > 8) formatted += '-' + value.substring(8, 10);
+                    
+                    this.value = formatted;
+                }
+            });
+            
+            phoneInput.addEventListener('blur', function() {
+                const digits = this.value.replace(/\D/g, '');
+                if(digits.length < 10) {
+                    this.style.borderColor = '#dc3545';
+                    showMessage('Введите корректный номер телефона (минимум 10 цифр)', 'error');
+                } else {
+                    this.style.borderColor = '#ddd';
+                }
+            });
+        }
+        
+        // Кнопка быстрой заявки
+        const quickBtn = document.createElement('button');
+        quickBtn.innerHTML = '<i class="fas fa-bolt"></i> Быстрая заявка';
+        quickBtn.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #2a6b2a, #28a745);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(42, 107, 42, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        `;
+        quickBtn.onmouseover = () => {
+            quickBtn.style.transform = 'scale(1.05)';
+            quickBtn.style.boxShadow = '0 8px 25px rgba(42, 107, 42, 0.6)';
+        };
+        quickBtn.onmouseout = () => {
+            quickBtn.style.transform = 'scale(1)';
+            quickBtn.style.boxShadow = '0 5px 20px rgba(42, 107, 42, 0.4)';
+        };
+        quickBtn.onclick = () => {
+            document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+            document.getElementById('name').focus();
+        };
+        document.body.appendChild(quickBtn);
+        
+        // Проверяем сохраненные заявки при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Сайт загружен');
+            console.log('📧 Email для отправки:', TARGET_EMAIL);
+            console.log('📞 Телефон для связи:', PHONE_NUMBER);
+        });
+    </script>
+
+    <!-- PHP СКРИПТ ДЛЯ ОТПРАВКИ (Нужно создать файл send-email.php на сервере) -->
+    <!-- 
+    СОЗДАЙТЕ ФАЙЛ send-email.php НА ВАШЕМ СЕРВЕРЕ С СОДЕРЖИМЫМ:
+    
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $to = "pomorov60@mail.ru";
+        $subject = "Заявка с сайта: " . $_POST['name'];
+        
+        $message = "
+        <html>
+        <head>
+            <title>Новая заявка с сайта</title>
+        </head>
+        <body>
+            <h2>🎯 Новая заявка с сайта</h2>
+            <p><strong>👤 Имя:</strong> " . $_POST['name'] . "</p>
+            <p><strong>📱 Телефон:</strong> " . $_POST['phone'] . "</p>
+            <p><strong>📧 Email:</strong> " . ($_POST['email'] ?: 'не указан') . "</p>
+            <p><strong>🛒 Продукция:</strong> " . $_POST['product'] . "</p>
+            <p><strong>📝 Сообщение:</strong> " . ($_POST['message'] ?: 'нет') . "</p>
+            <p><strong>📅 Дата:</strong> " . date('d.m.Y H:i:s') . "</p>
+        </body>
+        </html>
+        ";
+        
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: сайт <noreply@ваш-домен.ru>" . "\r\n";
+        
+        if (mail($to, $subject, $message, $headers)) {
+            echo json_encode(['success' => true, 'message' => 'Заявка отправлена']);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Ошибка отправки']);
+        }
+    }
+    ?>
+    -->
+</body>
+</html>  изучи код и сделай так чтобы https://mail.ru/ это окно не открывалось а сразу заявка отправлялась
